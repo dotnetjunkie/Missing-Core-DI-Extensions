@@ -64,7 +64,7 @@ namespace SampleApplication.CastleWindsor
         private void RegisterApplicationComponents(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
             // Register application services
-            container.Register(Component.For(app.GetApplicationControllers()).LifestyleScoped());
+            container.Register(Component.For(app.GetControllerTypes()).LifestyleScoped());
             // container.Register(Component.For(app.GetApplicationViewComponents()));
 
             container.Register(Component.For<IUserService>().ImplementedBy<AspNetUserService>().LifestyleScoped());

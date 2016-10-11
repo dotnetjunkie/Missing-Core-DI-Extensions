@@ -39,7 +39,7 @@ namespace MissingDIExtensions
             services.AddSingleton<ITagHelperActivator>(new DelegatingTagHelperActivator(activator));
         }
 
-        public static Type[] GetApplicationControllers(this IApplicationBuilder builder)
+        public static Type[] GetControllerTypes(this IApplicationBuilder builder)
         {
             var manager = builder.ApplicationServices.GetRequiredService<ApplicationPartManager>();
 
@@ -49,10 +49,14 @@ namespace MissingDIExtensions
             return feature.Controllers.Select(t => t.AsType()).ToArray();
         }
 
-        public static Type[] GetApplicationViewComponents(this IApplicationBuilder builder)
+        public static Type[] GetViewComponentTypes(this IApplicationBuilder builder)
         {
-            var componentProvider = builder.ApplicationServices.GetRequiredService<IViewComponentDescriptorProvider>();
-            return componentProvider.GetViewComponents().Select(description => description.TypeInfo.AsType()).ToArray();
+            var manager = builder.ApplicationServices.GetRequiredService<ApplicationPartManager>();
+
+            var feature = new ViewComponentFeature();
+            manager.PopulateFeature(feature);
+
+            return feature.ViewComponents.Select(t => t.AsType()).ToArray();
         }
     }
 

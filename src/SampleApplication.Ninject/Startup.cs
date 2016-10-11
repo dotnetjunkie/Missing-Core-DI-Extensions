@@ -72,6 +72,8 @@ namespace SampleApplication.Ninject
             IKernelConfiguration config = new KernelConfiguration();
 
             // Register application services
+            config.Bind(app.GetControllerTypes()).ToSelf().InScope(RequestScope);
+
             config.Bind<IUserService>().To<AspNetUserService>().InScope(RequestScope);
             config.Bind<CustomMiddleware>().ToSelf();
 

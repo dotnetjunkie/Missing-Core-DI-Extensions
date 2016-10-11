@@ -69,7 +69,7 @@ namespace SampleApplication.Unity
         private void RegisterApplicationComponents(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
             // Register application services
-            app.GetApplicationControllers().ToList().ForEach(t => container.RegisterType(t, PerRequest));
+            app.GetControllerTypes().ToList().ForEach(t => container.RegisterType(t, PerRequest));
 
             container.RegisterType<IUserService, AspNetUserService>(PerRequest);
 

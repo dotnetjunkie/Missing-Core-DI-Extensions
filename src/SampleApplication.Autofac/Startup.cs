@@ -72,8 +72,8 @@ namespace SampleApplication.Autofac
             ContainerBuilder builder = new ContainerBuilder();
 
             // Register application services
-            builder.RegisterTypes(app.GetApplicationControllers()).InstancePerRequest();
-            builder.RegisterTypes(app.GetApplicationViewComponents());
+            builder.RegisterTypes(app.GetControllerTypes()).InstancePerRequest();
+            builder.RegisterTypes(app.GetViewComponentTypes());
 
             builder.RegisterType<AspNetUserService>().As<IUserService>().InstancePerRequest();
             builder.RegisterType<CustomMiddleware>();
