@@ -5,6 +5,7 @@ using Autofac.Core.Lifetime;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.ViewFeatures.Internal;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -79,7 +80,7 @@ namespace SampleApplication.Autofac
             builder.RegisterType<CustomMiddleware>();
 
             // Cross-wire required framework services
-            builder.Register(_ => app.GetRequiredRequestService<IHttpContextAccessor>());
+            builder.Register(_ => app.GetRequiredRequestService<IViewBufferScope>());
             builder.RegisterInstance(loggerFactory);
 
             return builder.Build();

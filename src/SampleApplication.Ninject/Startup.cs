@@ -3,6 +3,7 @@ using System.Threading;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.ViewFeatures.Internal;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -78,7 +79,7 @@ namespace SampleApplication.Ninject
             config.Bind<CustomMiddleware>().ToSelf();
 
             // Cross-wire required framework services
-            config.BindToMethod(app.GetRequestService<IHttpContextAccessor>);
+            config.BindToMethod(app.GetRequestService<IViewBufferScope>);
             config.Bind<ILoggerFactory>().ToConstant(loggerFactory);
 
             return config.BuildReadonlyKernel();

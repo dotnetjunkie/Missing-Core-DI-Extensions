@@ -4,6 +4,7 @@ using System.Threading;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.ViewFeatures.Internal;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -75,7 +76,7 @@ namespace SampleApplication.Unity
 
             // Cross-wire required framework services
             container.RegisterInstance(loggerFactory);
-            container.RegisterType<IHttpContextAccessor>(new InjectionFactory(c => app.GetRequestService<IHttpContextAccessor>()));
+            container.RegisterType<IViewBufferScope>(new InjectionFactory(c => app.GetRequestService<IViewBufferScope>()));
         }
 
         private static HierarchicalLifetimeManager PerRequest = new HierarchicalLifetimeManager();

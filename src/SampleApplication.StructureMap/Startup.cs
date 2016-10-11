@@ -2,7 +2,7 @@
 using System.Threading;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.ViewFeatures.Internal;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -72,7 +72,7 @@ namespace SampleApplication.StructureMap
 
                 // Cross-wire required framework services
                 c.For<ILoggerFactory>().Use(loggerFactory);
-                c.For<IHttpContextAccessor>().Use(_ => app.GetRequestService<IHttpContextAccessor>());
+                c.For<IViewBufferScope>().Use(_ => app.GetRequestService<IViewBufferScope>());
             });
         }
     }

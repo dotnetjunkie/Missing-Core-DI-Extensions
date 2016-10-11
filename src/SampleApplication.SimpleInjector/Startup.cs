@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.ViewFeatures.Internal;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -73,7 +74,7 @@ namespace SampleApplication.SimpleInjector
             container.Register<CustomMiddleware>();
 
             // Cross-wire required framework services
-            container.RegisterSingleton<Func<IHttpContextAccessor>>(() => app.GetRequestService<IHttpContextAccessor>());
+            container.RegisterSingleton<Func<IViewBufferScope>>(() => app.GetRequestService<IViewBufferScope>());
             container.RegisterSingleton(loggerFactory);
 
             container.Verify();
