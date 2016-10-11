@@ -24,6 +24,8 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SampleApplication.Unity", "
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SampleApplication.SimpleInjector", "src\SampleApplication.SimpleInjector\SampleApplication.SimpleInjector.xproj", "{FC237712-0C5A-4F2E-A70B-5DCF664F21DC}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SampleApplication.PureDI", "src\SampleApplication.PureDI\SampleApplication.PureDI.xproj", "{24FDA581-7CAA-475D-BE1B-B7D8C01EF913}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +60,10 @@ Global
 		{FC237712-0C5A-4F2E-A70B-5DCF664F21DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC237712-0C5A-4F2E-A70B-5DCF664F21DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC237712-0C5A-4F2E-A70B-5DCF664F21DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24FDA581-7CAA-475D-BE1B-B7D8C01EF913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24FDA581-7CAA-475D-BE1B-B7D8C01EF913}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24FDA581-7CAA-475D-BE1B-B7D8C01EF913}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24FDA581-7CAA-475D-BE1B-B7D8C01EF913}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,5 +76,6 @@ Global
 		{497DAA26-BB38-4F58-BAA1-FA5A3EFBD4D2} = {85B1EB67-BD17-42E1-A216-0A9472CDA7F1}
 		{7B090CCB-B8DB-47D5-82B2-80DC2A012CCF} = {85B1EB67-BD17-42E1-A216-0A9472CDA7F1}
 		{FC237712-0C5A-4F2E-A70B-5DCF664F21DC} = {85B1EB67-BD17-42E1-A216-0A9472CDA7F1}
+		{24FDA581-7CAA-475D-BE1B-B7D8C01EF913} = {85B1EB67-BD17-42E1-A216-0A9472CDA7F1}
 	EndGlobalSection
 EndGlobal
