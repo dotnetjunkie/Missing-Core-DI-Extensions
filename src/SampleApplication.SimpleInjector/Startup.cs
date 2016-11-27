@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -28,7 +29,7 @@ namespace SampleApplication.SimpleInjector
 
         public IConfigurationRoot Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+            // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
@@ -39,6 +40,7 @@ namespace SampleApplication.SimpleInjector
             services.AddRequestScopingMiddleware(container.BeginExecutionContextScope);
             services.AddCustomControllerActivation(container.GetInstance);
             services.AddCustomViewComponentActivation(container.GetInstance);
+            services.AddCustomTagHelperActivation(this.container.GetInstance, IsApplicationType);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -79,6 +81,8 @@ namespace SampleApplication.SimpleInjector
 
             container.Verify();
         }
+
+        private static bool IsApplicationType(Type type) => type.GetTypeInfo().Namespace.StartsWith("SampleApplication");
     }
 
     public interface IUserService { }
