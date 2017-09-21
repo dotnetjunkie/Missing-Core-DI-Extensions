@@ -1,30 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{85B1EB67-BD17-42E1-A216-0A9472CDA7F1}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{44D8A7FE-8068-4D78-A44D-1C96977D9AED}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "MissingDIExtensions", "src\MissingDIExtensions\MissingDIExtensions.xproj", "{B395F3A4-944B-45C4-9C54-AA2954E9FCEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MissingDIExtensions", "MissingDIExtensions\MissingDIExtensions.csproj", "{B395F3A4-944B-45C4-9C54-AA2954E9FCEB}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SampleApplication.Autofac", "src\SampleApplication.Autofac\SampleApplication.Autofac.xproj", "{AD7AD4EF-C240-422C-BCEA-2385C92A54B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleApplication.Autofac", "SampleApplication.Autofac\SampleApplication.Autofac.csproj", "{AD7AD4EF-C240-422C-BCEA-2385C92A54B9}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SampleApplication.Ninject", "src\SampleApplication.Ninject\SampleApplication.Ninject.xproj", "{84F36B31-8D68-4D57-BF7E-E1739A76021B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleApplication.Ninject", "SampleApplication.Ninject\SampleApplication.Ninject.csproj", "{84F36B31-8D68-4D57-BF7E-E1739A76021B}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SampleApplication.StructureMap", "src\SampleApplication.StructureMap\SampleApplication.StructureMap.xproj", "{03F01273-C192-4148-8C15-9ED66FF1F0D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleApplication.StructureMap", "SampleApplication.StructureMap\SampleApplication.StructureMap.csproj", "{03F01273-C192-4148-8C15-9ED66FF1F0D3}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SampleApplication.CastleWindsor", "src\SampleApplication.CastleWindsor\SampleApplication.CastleWindsor.xproj", "{497DAA26-BB38-4F58-BAA1-FA5A3EFBD4D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleApplication.CastleWindsor", "SampleApplication.CastleWindsor\SampleApplication.CastleWindsor.csproj", "{497DAA26-BB38-4F58-BAA1-FA5A3EFBD4D2}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SampleApplication.Unity", "src\SampleApplication.Unity\SampleApplication.Unity.xproj", "{7B090CCB-B8DB-47D5-82B2-80DC2A012CCF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleApplication.Unity", "SampleApplication.Unity\SampleApplication.Unity.csproj", "{7B090CCB-B8DB-47D5-82B2-80DC2A012CCF}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SampleApplication.SimpleInjector", "src\SampleApplication.SimpleInjector\SampleApplication.SimpleInjector.xproj", "{FC237712-0C5A-4F2E-A70B-5DCF664F21DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleApplication.SimpleInjector", "SampleApplication.SimpleInjector\SampleApplication.SimpleInjector.csproj", "{FC237712-0C5A-4F2E-A70B-5DCF664F21DC}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SampleApplication.PureDI", "src\SampleApplication.PureDI\SampleApplication.PureDI.xproj", "{24FDA581-7CAA-475D-BE1B-B7D8C01EF913}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleApplication.PureDI", "SampleApplication.PureDI\SampleApplication.PureDI.csproj", "{24FDA581-7CAA-475D-BE1B-B7D8C01EF913}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -68,14 +63,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{B395F3A4-944B-45C4-9C54-AA2954E9FCEB} = {85B1EB67-BD17-42E1-A216-0A9472CDA7F1}
-		{AD7AD4EF-C240-422C-BCEA-2385C92A54B9} = {85B1EB67-BD17-42E1-A216-0A9472CDA7F1}
-		{84F36B31-8D68-4D57-BF7E-E1739A76021B} = {85B1EB67-BD17-42E1-A216-0A9472CDA7F1}
-		{03F01273-C192-4148-8C15-9ED66FF1F0D3} = {85B1EB67-BD17-42E1-A216-0A9472CDA7F1}
-		{497DAA26-BB38-4F58-BAA1-FA5A3EFBD4D2} = {85B1EB67-BD17-42E1-A216-0A9472CDA7F1}
-		{7B090CCB-B8DB-47D5-82B2-80DC2A012CCF} = {85B1EB67-BD17-42E1-A216-0A9472CDA7F1}
-		{FC237712-0C5A-4F2E-A70B-5DCF664F21DC} = {85B1EB67-BD17-42E1-A216-0A9472CDA7F1}
-		{24FDA581-7CAA-475D-BE1B-B7D8C01EF913} = {85B1EB67-BD17-42E1-A216-0A9472CDA7F1}
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37D0E863-4F5D-4C6F-AB0A-6F17994B6B36}
 	EndGlobalSection
 EndGlobal

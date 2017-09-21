@@ -2030,7 +2030,7 @@
     "Libuv/1.9.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-5EUXbGuAE045mGjS3IrEthtiSQBAh4t9k9drobhGjp4t9WV0ddFMxo7QaHQhgKu9mtbcNFbz/JluZPPNaVjGfg=="
+      "sha512": "sha512-9Q7AaqtQhS8JDSIvRBt6ODSLWDBI4c8YxNxyCQemWebBFUtBbc6M5Vi5Gz1ZyIUlTW3rZK9bIr5gnVyv0z7a2Q=="
     },
     "Microsoft.AspNetCore.Antiforgery/1.0.0": {
       "type": "package",
@@ -2230,17 +2230,17 @@
     "Microsoft.CodeAnalysis.Analyzers/1.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-fzKDAc83sHv2ppSYGpx3kxEQJNxOcF0lh994ze17GhfR3rqDkKQ2v/3EQY33PXE/bqVowNgbd+K2V8VxWNdxvg=="
+      "sha512": "sha512-HS3iRWZKcUw/8eZ/08GXKY2Bn7xNzQPzf8gRPHGSowX7u7XXu9i9YEaBeBNKUXWfI7qjvT2zXtLUvbN0hds8vg=="
     },
     "Microsoft.CodeAnalysis.Common/1.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ISYvCz0R8fs0L+E2m5u5udWFAi4ZAwPNjEyZfSjtVt3lkWGa7ldwnRlsXYo+Blof6oiVDsk6Edn91jPEHRel8g=="
+      "sha512": "sha512-V09G35cs0CT1C4Dr1IEOh8IGfnWALEVAOO5JXsqagxXwmYR012TlorQ+vx2eXxfZRKs3gAS/r92gN9kRBLba5A=="
     },
     "Microsoft.CodeAnalysis.CSharp/1.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-KZG/UnynXn8ETd0iFlNYLFbqV2b981F/2ScVpXifl9q9VC+tX0D1Q1b2OBuk050Vu7MdJVVM2ayTA2XwA9DuIg=="
+      "sha512": "sha512-BgWDIAbSFsHuGeLSn/rljLi51nXqkSo4DZ0qEIrHyPVasrhxEVq7aV8KKZ3HEfSFB+GIhBmOogE+mlOLYg19eg=="
     },
     "Microsoft.CSharp/4.0.0.0": {
       "type": "referenceassembly",
@@ -2430,7 +2430,7 @@
     "System.Collections.Immutable/1.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-bIQEno55556ahhW/VkCKbykhHoCI8moGgrTsVahu7vDIhUjGotFIitWZxuTUsVdRxLKBNy93kH8i+N99RGq/Iw=="
+      "sha512": "sha512-Cma8cBW6di16ZLibL8LYQ+cLjGzoKxpOTu/faZfDcx94ZjAGq6Nv5RO7+T1YZXqEXTZP9rt1wLVEONVpURtUqw=="
     },
     "System.ComponentModel/4.0.0.0": {
       "type": "referenceassembly",
@@ -2485,7 +2485,7 @@
     "System.Numerics.Vectors/4.1.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-SobLnf5JqmotSMnk0UmXknx9BSRE+esxWT8a6wFsutbXtCr6IG301NntduQ9enuVutP4teWxzha3rTi/uuquFw=="
+      "sha512": "sha512-Ex1NSKycC2wi5XBMWUGWPc3lumh6OQWFFmmpZFZz0oLht5lQ+wWPHVZumOrMJuckfUiVMd4p67BrkBos8lcF+Q=="
     },
     "System.Reflection/4.0.0.0": {
       "type": "referenceassembly",
@@ -2500,7 +2500,7 @@
     "System.Reflection.Metadata/1.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-hS/rcH4gWfk1UKKHRYfjZrUUDNz6Bpi99mn/9wZjncE7yWgCEro4FJ5+ON7p8tIgxU7ohVQjlign3KnOXCNoYw=="
+      "sha512": "sha512-jMSCxA4LSyKBGRDm/WtfkO03FkcgRzHxwvQRib1bm2GZ8ifKM1MX1al6breGCEQK280mdl9uQS7JNPXRYk90jw=="
     },
     "System.Resources.ResourceManager/4.0.0.0": {
       "type": "referenceassembly",
