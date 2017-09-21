@@ -79,7 +79,7 @@ namespace SampleApplication.Unity
             container.RegisterType<IViewBufferScope>(new InjectionFactory(c => app.GetRequestService<IViewBufferScope>()));
         }
 
-        private static HierarchicalLifetimeManager PerRequest = new HierarchicalLifetimeManager();
+        private static HierarchicalLifetimeManager PerRequest => new HierarchicalLifetimeManager();
     }
 
     public interface IUserService { }

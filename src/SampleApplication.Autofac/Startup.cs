@@ -72,6 +72,9 @@ namespace SampleApplication.Autofac
         {
             ContainerBuilder builder = new ContainerBuilder();
 
+            builder.RegisterInstance(app.ApplicationServices.GetService<IHttpContextAccessor>());
+            builder.RegisterInstance(loggerFactory);
+
             // Register application services
             builder.RegisterTypes(app.GetControllerTypes()).InstancePerRequest();
             builder.RegisterTypes(app.GetViewComponentTypes());
@@ -81,7 +84,6 @@ namespace SampleApplication.Autofac
 
             // Cross-wire required framework services
             builder.Register(_ => app.GetRequiredRequestService<IViewBufferScope>());
-            builder.RegisterInstance(loggerFactory);
 
             return builder.Build();
         }
