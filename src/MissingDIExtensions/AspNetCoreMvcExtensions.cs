@@ -83,12 +83,7 @@ namespace MissingDIExtensions
         public DelegatingControllerActivator(Func<ControllerContext, object> controllerCreator,
             Action<ControllerContext, object> controllerReleaser = null)
         {
-            if (controllerCreator == null)
-            {
-                throw new ArgumentNullException(nameof(controllerCreator));
-            }
-
-            this.controllerCreator = controllerCreator;
+            this.controllerCreator = controllerCreator ?? throw new ArgumentNullException(nameof(controllerCreator));
             this.controllerReleaser = controllerReleaser ?? ((_, __) => { });
         }
 
@@ -104,9 +99,7 @@ namespace MissingDIExtensions
         public DelegatingViewComponentActivator(Func<Type, object> viewComponentCreator,
             Action<object> viewComponentReleaser = null)
         {
-            if (viewComponentCreator == null) throw new ArgumentNullException(nameof(viewComponentCreator));
-
-            this.viewComponentCreator = viewComponentCreator;
+            this.viewComponentCreator = viewComponentCreator ?? throw new ArgumentNullException(nameof(viewComponentCreator));
             this.viewComponentReleaser = viewComponentReleaser ?? (_ => { });
         }
 
@@ -126,13 +119,9 @@ namespace MissingDIExtensions
         public DelegatingTagHelperActivator(Predicate<Type> customCreatorSelector, Func<Type, object> customTagHelperCreator,
             ITagHelperActivator defaultTagHelperActivator)
         {
-            if (customCreatorSelector == null) throw new ArgumentNullException(nameof(customCreatorSelector));
-            if (customTagHelperCreator == null) throw new ArgumentNullException(nameof(customTagHelperCreator));
-            if (defaultTagHelperActivator == null) throw new ArgumentNullException(nameof(defaultTagHelperActivator));
-
-            this.customCreatorSelector = customCreatorSelector;
-            this.customTagHelperCreator = customTagHelperCreator;
-            this.defaultTagHelperActivator = defaultTagHelperActivator;
+            this.customCreatorSelector = customCreatorSelector ?? throw new ArgumentNullException(nameof(customCreatorSelector));
+            this.customTagHelperCreator = customTagHelperCreator ?? throw new ArgumentNullException(nameof(customTagHelperCreator));
+            this.defaultTagHelperActivator = defaultTagHelperActivator ?? throw new ArgumentNullException(nameof(defaultTagHelperActivator));
         }
 
         public TTagHelper Create<TTagHelper>(ViewContext context) where TTagHelper : ITagHelper =>

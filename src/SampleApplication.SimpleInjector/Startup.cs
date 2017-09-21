@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using MissingDIExtensions;
 using SimpleInjector;
-using SimpleInjector.Extensions.ExecutionContextScoping;
+using SimpleInjector.Lifestyles;
 
 namespace SampleApplication.SimpleInjector
 {
@@ -35,12 +35,19 @@ namespace SampleApplication.SimpleInjector
             // Add framework services.
             services.AddMvc();
 
+            IntegrateSimpleInjector(services);
+        }
+
+        private void IntegrateSimpleInjector(IServiceCollection services)
+        {
+            container.Options.DefaultScopedLifestyle = new AsyncScopedLifestyle();
+
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
-            services.AddRequestScopingMiddleware(container.BeginExecutionContextScope);
+            services.AddRequestScopingMiddleware(() => AsyncScopedLifestyle.BeginScope(this.container));
             services.AddCustomControllerActivation(container.GetInstance);
             services.AddCustomViewComponentActivation(container.GetInstance);
-            services.AddCustomTagHelperActivation(this.container.GetInstance, IsApplicationType);
+            services.AddCustomTagHelperActivation(container.GetInstance, IsApplicationType);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,7 +73,7 @@ namespace SampleApplication.SimpleInjector
 
         private void RegisterApplicationComponents(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
-            container.Options.DefaultScopedLifestyle = new ExecutionContextScopeLifestyle();
+            container.Options.DefaultScopedLifestyle = new AsyncScopedLifestyle();
 
             // Register application services
             container.RegisterMvcControllers(app);
@@ -76,7 +83,7 @@ namespace SampleApplication.SimpleInjector
             container.Register<CustomMiddleware>();
 
             // Cross-wire required framework services
-            container.RegisterSingleton<Func<IViewBufferScope>>(() => app.GetRequestService<IViewBufferScope>());
+            container.RegisterSingleton<Func<IViewBufferScope>>(() => AspNetCoreExtensions.GetRequestService<IViewBufferScope>(app));
             container.RegisterSingleton(loggerFactory);
 
             container.Verify();
