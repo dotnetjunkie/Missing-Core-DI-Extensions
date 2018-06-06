@@ -8,8 +8,10 @@ using Microsoft.AspNetCore.Mvc.ViewFeatures.Internal;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.Practices.Unity;
 using MissingDIExtensions;
+using Unity;
+using Unity.Injection;
+using Unity.Lifetime;
 
 namespace SampleApplication.Unity
 {
